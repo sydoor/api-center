@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <appender name="RollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/lizikj-gateway.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/lizikj-gateway.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>3000</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+        </encoder>
+    </appender>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+		</encoder>
+	</appender>
+    
+    <appender name="LOGSTASH_DEV" class="com.cwbase.logback.RedisAppender">
+		<source>lizikj-center-gateway</source>
+		<type>lizikj-java-log</type>   <!-- 固定 -->
+		<key>lizikj-java-log</key>
+		<tags>dev</tags>
+		<host>192.168.5.176</host>
+		<port>6379</port>
+		<password>redispass173</password>
+		<mdc>true</mdc>
+		<location>true</location>
+		<callerStackIndex>0</callerStackIndex>
+	</appender>
+	
+	<appender name="LOGSTASH_TEST" class="com.cwbase.logback.RedisAppender">
+	    <source>lizikj-center-gateway</source> <!-- 应用名 -->
+	    <type>lizikj-java-test</type>   <!-- 固定 -->
+	    <key>lizikj-java-test</key>    
+	    <tags>dev</tags>
+	    <host>172.16.0.2</host>
+	    <port>6379</port>
+	    <password>redispass245</password>
+	    <mdc>true</mdc>
+	    <location>true</location>
+	    <callerStackIndex>0</callerStackIndex>
+	</appender>
+	
+	<appender name="LOGSTASH_PROD" class="com.cwbase.logback.RedisAppender">
+		<source>lizikj-center-gateway</source>
+		<type>lizikj-java-prod</type>   <!-- 固定 -->
+		<key>lizikj-java-prod</key>
+		<tags>dev</tags>
+	    <host>172.16.0.2</host>
+	    <port>6379</port>
+	    <password>redispass245</password>
+	    <mdc>true</mdc>
+	    <location>true</location>
+		<callerStackIndex>0</callerStackIndex>
+	</appender>
+
+	<springProfile name="dev">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="RollingFileAppender" />
+			<!--<appender-ref ref="LOGSTASH_DEV"/>-->
+		</root>
+	</springProfile>
+
+	<springProfile name="test">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="RollingFileAppender" />
+			<appender-ref ref="LOGSTASH_TEST"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="prod">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="RollingFileAppender" />
+			<appender-ref ref="LOGSTASH_PROD"/>
+		</root>
+	</springProfile>
+
+    <logger name="com.lizikj.gateway" additivity="true" level="INFO"/>
+
+	<logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" additivity="true" level="OFF" />
+	<logger name="springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator" additivity="true" level="OFF" />
+
+</configuration>

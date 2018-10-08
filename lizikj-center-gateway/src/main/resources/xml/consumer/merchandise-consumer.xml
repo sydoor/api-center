@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--商品 -->
+    <dubbo:reference id="goodsReadFacade" interface="com.lizikj.merchandise.facade.IGoodsReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="goodsWriteFacade" interface="com.lizikj.merchandise.facade.IGoodsWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="categoryReadFacade" interface="com.lizikj.merchandise.facade.ICategoryReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="categoryWriteFacade" interface="com.lizikj.merchandise.facade.ICategoryWriteFacade" check="false" version="${dubbo.service.version}" />
+
+
+    <dubbo:reference id="snackReadFacade" interface="com.lizikj.merchandise.facade.ISnackReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="snackWriteFacade" interface="com.lizikj.merchandise.facade.ISnackWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="chainGoodsReadFacade" interface="com.lizikj.merchandise.facade.IChainGoodsReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="chainGoodsWriteFacade" interface="com.lizikj.merchandise.facade.IChainGoodsWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="tagReadFacade" interface="com.lizikj.merchandise.facade.ITagReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="tagWriteFacade" interface="com.lizikj.merchandise.facade.ITagWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="skuReadFacade" interface="com.lizikj.merchandise.facade.ISkuReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="cartGoodsReadFacade" interface="com.lizikj.merchandise.facade.ICartGoodsReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="cartGoodsWriteFacade" interface="com.lizikj.merchandise.facade.ICartGoodsWriteFacade" check="false" version="${dubbo.service.version}" />
+
+</beans>

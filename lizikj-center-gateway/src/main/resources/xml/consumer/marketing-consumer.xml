@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+    <!--营销活动-->
+    <dubbo:reference id="cutPriceReadFacade" interface="com.lizikj.marketing.api.facade.ICutPriceReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="cutPriceWriteFacade" interface="com.lizikj.marketing.api.facade.ICutPriceWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="activityTemplateFacade" interface="com.lizikj.marketing.api.facade.IActivityTemplateReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="activityTemplateWriteFacade" interface="com.lizikj.marketing.api.facade.IActivityTemplateWriteFacade" check="false" version="${dubbo.service.version}" />
+	<dubbo:reference id="shopMarketingReadFacade" interface="com.lizikj.marketing.api.facade.IShopMarketingReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <!-- 商家代金券 -->
+	<dubbo:reference id="merchantCouponReadFacade" interface="com.lizikj.marketing.api.facade.IMerchantCouponReadFacade" check="false" version="${dubbo.service.version}" />
+	<dubbo:reference id="merchantCouponWriteFacade" interface="com.lizikj.marketing.api.facade.IMerchantCouponWriteFacade" check="false" version="${dubbo.service.version}" />
+
+	<!-- 券实体 -->
+	<dubbo:reference id="prizePoolItemReadFacade" interface="com.lizikj.marketing.api.facade.IPrizePoolItemReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="userRedPacketRecordReadFacade" interface="com.lizikj.marketing.api.facade.IUserRedPacketRecordReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="redPacketReadFacade" interface="com.lizikj.marketing.api.facade.IRedPacketReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="redPacketWriteFacade" interface="com.lizikj.marketing.api.facade.IRedPacketWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="cardWriteFacade" interface="com.lizikj.marketing.api.facade.ICardWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="cardReadFacade" interface="com.lizikj.marketing.api.facade.ICardReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="conditionFacade" interface="com.lizikj.marketing.api.facade.IConditionFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="activityReadFacade" interface="com.lizikj.marketing.api.facade.IActivityReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="activityWriteFacade" interface="com.lizikj.marketing.api.facade.IActivityWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="prizeFacade" interface="com.lizikj.marketing.api.facade.IPrizeFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="controlFacade" interface="com.lizikj.marketing.api.facade.IControlFacade" check="false" version="${dubbo.service.version}" />
+</beans>

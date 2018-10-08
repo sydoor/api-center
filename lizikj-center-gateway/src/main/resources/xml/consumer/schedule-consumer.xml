@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--预约排队-->
+    <dubbo:reference id="scheduleQueueReadFacade" interface="com.lizikj.schedule.api.facade.IScheduleQueueReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="scheduleQueueWriteFacade" interface="com.lizikj.schedule.api.facade.IScheduleQueueWriteFacade" check="false" version="${dubbo.service.version}" />
+</beans>

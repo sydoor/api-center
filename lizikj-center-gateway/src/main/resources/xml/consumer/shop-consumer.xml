@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--店铺 -->
+
+    <dubbo:reference id="shopValueAddedReadFacade" interface="com.lizikj.shop.api.facade.IShopValueAddedReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopValueAddedWriteFacade" interface="com.lizikj.shop.api.facade.IShopValueAddedWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopDeskReadFacade" interface="com.lizikj.shop.api.facade.IShopDeskReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopDeskWriteFacade" interface="com.lizikj.shop.api.facade.IShopDeskWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopAreaWriteFacade" interface="com.lizikj.shop.api.facade.IShopAreaWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopAreaReadFacade" interface="com.lizikj.shop.api.facade.IShopAreaReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopPrintReadFacade" interface="com.lizikj.shop.api.facade.IShopPrintReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopPrintWriteFacade" interface="com.lizikj.shop.api.facade.IShopPrintWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopAuthCodeWriteFacade" interface="com.lizikj.shop.api.facade.IShopAuthCodeWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopAuthCodeReadFacade" interface="com.lizikj.shop.api.facade.IShopAuthCodeReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference interface="com.lizikj.shop.api.facade.IShopSettingReadFacade" id="shopSettingReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference interface="com.lizikj.shop.api.facade.IShopSettingWriteFacade" id="shopSettingWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopSettingTemplateReadFacade" interface="com.lizikj.shop.api.facade.IShopSettingTemplateReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopSettingTemplateWriteFacade" interface="com.lizikj.shop.api.facade.IShopSettingTemplateWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopMerchandiseTaskReadFacade" interface="com.lizikj.shop.api.facade.IShopMerchandiseTaskReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopMerchandiseTaskWriteFacade" interface="com.lizikj.shop.api.facade.IShopMerchandiseTaskWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopCallServiceWordsReadFacade" interface="com.lizikj.shop.api.facade.IShopCallServiceWordsReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopCallServiceWordsWriteFacade" interface="com.lizikj.shop.api.facade.IShopCallServiceWordsWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopMerchandiseFlavorReadFacade"
+                     interface="com.lizikj.shop.api.facade.IShopMerchandiseFlavorReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopMerchandiseFlavorWriteFacade"
+                     interface="com.lizikj.shop.api.facade.IShopMerchandiseFlavorWriteFacade" check="false" version="${dubbo.service.version}"  />
+
+    <dubbo:reference interface="com.lizikj.shop.api.facade.IShopMerchandiseUnitReadFacade" id="shopMerchandiseUnitReadFacade" check="false"  version="${dubbo.service.version}" />
+    <dubbo:reference interface="com.lizikj.shop.api.facade.IShopMerchandiseUnitWriteFacade" id="shopMerchandiseUnitWriteFacade"  check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopNoticeReadFacade" interface="com.lizikj.shop.api.facade.IShopNoticeReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopNoticeWriteFacade" interface="com.lizikj.shop.api.facade.IShopNoticeWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopSettingTaskWriteFacade" interface="com.lizikj.shop.api.facade.IShopSettingTaskWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="agentReadFacade" interface="com.lizikj.merchant.facade.IAgentReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopVirtualDataWriteFacade" interface="com.lizikj.shop.api.facade.IShopVirtualDataWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="authShopStaffReadFacade" interface="com.lizikj.merchant.facade.IAuthShopStaffReadFacade" check="false" version="${dubbo.service.version}" />
+
+	<dubbo:reference id="cashierHandoverRecordReadFacade" interface="com.lizikj.merchant.facade.ICashierHandoverRecordReadFacade" check="false" version="${dubbo.service.version}" />
+	
+	<dubbo:reference id="shopSettingFeeReadFacade" interface="com.lizikj.shop.api.facade.IShopSettingFeeReadFacade" check="false" version="${dubbo.service.version}" />
+	
+	<dubbo:reference id="authShopMenuTemplateReadFacade" interface="com.lizikj.merchant.facade.IAuthShopMenuTemplateReadFacade" check="false" version="${dubbo.service.version}"/>
+	<dubbo:reference id="deskPublicQrcodeReadFacade" interface="com.lizikj.shop.api.facade.IDeskPublicQrcodeReadFacade" check="false" version="${dubbo.service.version}"/>
+</beans>

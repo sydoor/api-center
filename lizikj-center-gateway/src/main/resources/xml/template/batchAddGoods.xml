@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbook>
+    <worksheet idx="0">
+        <section startRow="0" endRow="0">
+            <mapping cell="A1">header.categoryName</mapping>
+            <mapping cell="B1">header.goodsName</mapping>
+            <mapping cell="C1">header.goodsNumber</mapping>
+            <mapping cell="D1">header.alias</mapping>
+            <mapping cell="E1">header.calMethod</mapping>
+            <mapping cell="F1">header.unit</mapping>
+            <mapping cell="G1">header.sellPrice</mapping>
+            <mapping cell="H1">header.onOffShelve</mapping>
+        </section>
+        <loop startRow="1" endRow="1" items="batchAddGoodsList" var="simpleGoods" varType="com.lizikj.merchandise.dto.BatchAddGoodsDTO">
+            <section startRow="1" endRow="1">
+                <mapping row="1" col="0">simpleGoods.categoryName</mapping>
+                <mapping row="1" col="1">simpleGoods.goodsName</mapping>
+                <mapping row="1" col="2">simpleGoods.goodsNumber</mapping>
+                <mapping row="1" col="3">simpleGoods.alias</mapping>
+                <mapping row="1" col="4">simpleGoods.calMethod</mapping>
+                <mapping row="1" col="5">simpleGoods.merchandiseUnitName</mapping>
+                <mapping row="1" col="6">simpleGoods.sellPrice</mapping>
+                <mapping row="1" col="7">simpleGoods.onOffShelve</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0"></cellcheck>
+                    <cellcheck offset="1"></cellcheck>
+                    <cellcheck offset="2"></cellcheck>
+                    <cellcheck offset="3"></cellcheck>
+                    <cellcheck offset="4"></cellcheck>
+                    <cellcheck offset="5"></cellcheck>
+                    <cellcheck offset="6"></cellcheck>
+                    <cellcheck offset="7"></cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

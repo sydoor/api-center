@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+
+    <dubbo:reference id="orderReadFacade" interface="com.lizikj.order.facade.IOrderReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="orderWriteFacade" interface="com.lizikj.order.facade.IOrderWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="orderPayWriteFacade" interface="com.lizikj.order.facade.IOrderPayWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="orderRefundFacade" interface="com.lizikj.order.facade.IOrderRefundWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shoppingCartWriteFacade" interface="com.lizikj.order.facade.IShoppingCartWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="syncPosOrderWriteFacade" interface="com.lizikj.order.facade.ISyncPosOrderWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="syncPosOrderReadFacade" interface="com.lizikj.order.facade.ISyncPosOrderReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="pendingOrderInfoWriteFacade" interface="com.lizikj.order.facade.IPendingOrderInfoWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="pendingOrderInfoReadFacade" interface="com.lizikj.order.facade.IPendingOrderInfoReadFacade" check="false" version="${dubbo.service.version}" />
+
+</beans>

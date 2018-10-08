@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>com.lizikj</groupId>
+		<artifactId>lizikj-center</artifactId>
+		<version>2.5.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>lizikj-center-gateway</artifactId>
+	<packaging>jar</packaging>
+ 	<modelVersion>4.0.0</modelVersion>
+	<name>${project.artifactId}</name>
+
+    <dependencies>
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		 <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-center-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-cater-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cwbase</groupId>
+			<artifactId>logback-redis-appender</artifactId>
+		</dependency>
+    
+    
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-center-api</artifactId>
+            <version>2.5.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-version</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-log-filter</artifactId>
+        </dependency>
+         <dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-shop-api</artifactId>
+		</dependency>
+         <dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-blance-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-payment-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-marketing-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-order-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-reporting-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-member-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-message-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-merchandise-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-merchant-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-user-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-login</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-datalog-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-schedule-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lizikj</groupId>
+            <artifactId>lizikj-cater-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.lizikj</groupId>
+			<artifactId>lizikj-tender-api</artifactId>
+		</dependency>
+
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-devtools</artifactId> -->
+<!--         </dependency> -->
+        <!-- zkclient -->
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- kryo -->
+        <dependency>
+            <groupId>com.esotericsoftware.kryo</groupId>
+            <artifactId>kryo</artifactId>
+        </dependency>
+
+        <!-- kryo-serializers -->
+        <dependency>
+            <groupId>de.javakaffee</groupId>
+            <artifactId>kryo-serializers</artifactId>
+        </dependency>
+
+        <!-- dubbo -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>com.cwbase</groupId>
+        	<artifactId>logback-redis-appender</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+        </dependency>
+
+        <!-- excel jxls -->
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-jexcel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-reader</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+		<dependency>
+			<groupId>eu.bitwalker</groupId>
+			<artifactId>UserAgentUtils</artifactId>
+			<version>1.21</version>
+		</dependency>
+		
+		<!-- dom4j -->
+		<dependency>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
+		
+    </dependencies>
+
+    <build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.Filter</include>
+					<include>**/*.xml</include>
+					<include>**/*.vm</include>
+					<include>**/*.xlsx</include>
+					<include>**/*.ftl</include>
+					<include>**/*.xls</include>
+				</includes>
+				<excludes>
+					<exclude>mybatis-generator/**</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- 指定maven 编译的JDK版本和编码格式 -->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-compiler-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<source>${java.version}</source>-->
+					<!--<target>${java.version}</target>-->
+					<!--<encoding>${file.encoding}</encoding>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!--skip.test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<!-- skip.deploy -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>core Release Repository</name>
+			<url>http://192.168.5.172:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>core Snapshots Repository</name>
+			<url>http://192.168.5.172:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>snapshots</id>
+			<name>core Snapshots Repository</name>
+			<url>http://192.168.5.172:8081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
+</project>

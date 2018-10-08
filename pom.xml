@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lizikj</groupId>
+    <artifactId>lizikj-center</artifactId>
+    <version>2.5.0-SNAPSHOT</version>
+    <modules>
+        <module>lizikj-center-api</module>
+        <module>lizikj-center-gateway</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.lizikj</groupId>
+        <artifactId>lizikj-parent</artifactId>
+        <version>2.5.0-SNAPSHOT</version>
+        <relativePath>../lizikj-parent/pom.xml</relativePath>
+    </parent>
+    <properties>
+
+        <lizikj-center-api.version>2.5.0-SNAPSHOT</lizikj-center-api.version>
+
+        <!--lizikj commons-->
+        <lizikj-log-filter.version>2.5.0-SNAPSHOT</lizikj-log-filter.version>
+        <lizikj-cli.version>2.5.0-SNAPSHOT</lizikj-cli.version>
+        <lizikj-version.version>2.5.0-SNAPSHOT</lizikj-version.version>
+        <!--lizikj bussiness-->
+        <lizikj-shop-api.version>2.5.0-SNAPSHOT</lizikj-shop-api.version>
+        <lizikj-marketing-api.version>2.5.0-SNAPSHOT</lizikj-marketing-api.version>
+        <lizikj-order-api.version>2.5.0-SNAPSHOT</lizikj-order-api.version>
+        <lizikj-reporting-api.version>2.5.0-SNAPSHOT</lizikj-reporting-api.version>
+        <lizikj-member-api.version>2.5.0-SNAPSHOT</lizikj-member-api.version>
+        <lizikj-merchandise-api.version>2.5.0-SNAPSHOT</lizikj-merchandise-api.version>
+        <lizikj-message-api.version>2.5.0-SNAPSHOT</lizikj-message-api.version>
+        <lizikj-merchant-api.version>2.5.0-SNAPSHOT</lizikj-merchant-api.version>
+        <lizikj-user-api.version>2.5.0-SNAPSHOT</lizikj-user-api.version>
+        <lizikj-login.version>2.5.0-SNAPSHOT</lizikj-login.version>
+        <lizikj-datalog.version>2.5.0-SNAPSHOT</lizikj-datalog.version>
+        <lizikj-payment-api.version>2.5.0-SNAPSHOT</lizikj-payment-api.version>
+        <lizikj-blance-api.version>2.5.0-SNAPSHOT</lizikj-blance-api.version>
+        <lizikj-schedule-api.version>2.5.0-SNAPSHOT</lizikj-schedule-api.version>
+        <lizikj-cater-api.version>2.5.0-SNAPSHOT</lizikj-cater-api.version>
+        <lizikj-tender-api.version>2.5.0-SNAPSHOT</lizikj-tender-api.version>
+        <lizikj-opt-api.version>2.5.0-SNAPSHOT</lizikj-opt-api.version>
+        <jxls.version>2.4.2</jxls.version>
+        <jxls-poi.version>1.0.13</jxls-poi.version>
+        <jxls-jexcel.version>1.0.6</jxls-jexcel.version>
+
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-cli</artifactId>
+                <version>${lizikj-cli.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-version</artifactId>
+                <version>${lizikj-version.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-log-filter</artifactId>
+                <version>${lizikj-log-filter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-shop-api</artifactId>
+                <version>${lizikj-shop-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-blance-api</artifactId>
+                <version>${lizikj-blance-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-payment-api</artifactId>
+                <version>${lizikj-payment-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-tender-api</artifactId>
+                <version>${lizikj-tender-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-marketing-api</artifactId>
+                <version>${lizikj-marketing-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-order-api</artifactId>
+                <version>${lizikj-order-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-reporting-api</artifactId>
+                <version>${lizikj-reporting-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-member-api</artifactId>
+                <version>${lizikj-member-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-message-api</artifactId>
+                <version>${lizikj-message-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-merchandise-api</artifactId>
+                <version>${lizikj-merchandise-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-merchant-api</artifactId>
+                <version>${lizikj-merchant-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-user-api</artifactId>
+                <version>${lizikj-user-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-login</artifactId>
+                <version>${lizikj-login.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-datalog-api</artifactId>
+                <version>${lizikj-datalog.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-schedule-api</artifactId>
+                <version>${lizikj-schedule-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-cater-api</artifactId>
+                <version>${lizikj-cater-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lizikj</groupId>
+                <artifactId>lizikj-opt-api</artifactId>
+                <version>${lizikj-opt-api.version}</version>
+            </dependency>
+
+
+            <!-- excel jxls -->
+            <dependency>
+                <groupId>org.jxls</groupId>
+                <artifactId>jxls</artifactId>
+                <version>${jxls.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jxls</groupId>
+                <artifactId>jxls-poi</artifactId>
+                <version>${jxls-poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jxls</groupId>
+                <artifactId>jxls-jexcel</artifactId>
+                <version>${jxls-jexcel.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>core Snapshots Repository</name>
+            <url>http://192.168.5.172:8081/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>core Release Repository</name>
+            <url>http://192.168.5.172:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>core Snapshots Repository</name>
+            <url>http://192.168.5.172:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

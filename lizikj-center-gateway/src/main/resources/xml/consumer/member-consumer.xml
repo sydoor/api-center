@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!--会员 -->
+    <dubbo:reference id="merchantMemberFacade" interface="com.lizikj.member.facade.IMerchantMemberFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantMemberAccountFacade" interface="com.lizikj.member.facade.IMerchantMemberAccountFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantMemberLabelFacade" interface="com.lizikj.member.facade.IMerchantMemberLabelFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantMemberLevelFacade" interface="com.lizikj.member.facade.IMerchantMemberLevelFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="memberFacade" interface="com.lizikj.member.facade.IMemberFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="memberSettingFacade" interface="com.lizikj.member.facade.IMemberSettingFacade" check="false" version="${dubbo.service.version}" />
+</beans>

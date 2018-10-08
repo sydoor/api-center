@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="lizikj-gateway" owner="lizikj" organization="lizikj"/>
+    <dubbo:consumer timeout="${dubbo.registry.timeout}" filter="logFilter"/>
+    <dubbo:registry address="${dubbo.registry.address}" file="${dubbo.registry.file}"/>
+
+    <!--<import resource="consumer/order-consumer.xml"/>-->
+    <!--<import resource="consumer/marketing-consumer.xml"/>-->
+    <!--<import resource="consumer/member-consumer.xml"/>-->
+    <!--<import resource="consumer/merchandise-consumer.xml"/>-->
+    <!--<import resource="consumer/merchant-consumer.xml"/>-->
+    <!--<import resource="consumer/reporting-consumer.xml"/>-->
+    <!--<import resource="consumer/shop-consumer.xml"/>-->
+    <!--<import resource="consumer/schedule-consumer.xml"/>-->
+    <!--<import resource="consumer/tender-consumer.xml"/>-->
+    <import resource="consumer/*-consumer.xml"/>
+
+    <!--<dubbo:provider timeout="${dubbo.registry.timeout}" retries="0" />-->
+
+    <!--消息推送 -->
+    <dubbo:reference id="msgPushFacade" interface="com.lizikj.message.api.facade.IMsgPushFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="phoneMsgFacade" interface="com.lizikj.message.api.facade.IPhoneMsgFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="msgReportFacade" interface="com.lizikj.message.api.facade.IMsgReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="msgSettingFacade" interface="com.lizikj.message.api.facade.IMsgSettingFacade" check="false" version="${dubbo.service.version}" />
+
+    <!--用户系统 -->
+    <dubbo:reference id="thirdUserInfoUserFacade" interface="com.lizikj.user.facade.IThirdUserInfoUserFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="wechatPublicAuthorizationFacade" interface="com.lizikj.user.facade.IWechatPublicAuthorizationFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantUserInfoFacade" interface="com.lizikj.user.facade.IMerchantUserInfoFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="wechatMerchantUserRelReadFacade" interface="com.lizikj.user.facade.IWechatMerchantUserRelReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="wechatPublicQrcodeWriteFacade" interface="com.lizikj.user.facade.IWechatPublicQrcodeWriteFacade" check="false" version="${dubbo.service.version}" />
+
+    <!--支付系统 -->
+    <dubbo:reference id="paymentWriteFacade" interface="com.lizikj.payment.facade.IPaymentWriteFacade" check="false" version="${dubbo.service.version}" ></dubbo:reference>
+    <dubbo:reference id="paymentReadFacade" interface="com.lizikj.payment.facade.IPaymentReadFacade" check="false" version="${dubbo.service.version}" ></dubbo:reference>
+    <dubbo:reference id="circulationReadFacade" interface="com.lizikj.payment.pay.facade.ICirculationReadFacade" check="false" version="${dubbo.service.version}" ></dubbo:reference>
+	<dubbo:reference id="merchantShopSignPageFacade" interface="com.lizikj.payment.pay.facade.IMerchantShopSignPageFacade" check="false" version="${dubbo.service.version}"/>
+
+    <!--数据同步-->
+    <dubbo:reference id="dataOperationLogFacade" interface="com.lizikj.datalog.facade.IDataOperationLogFacade" check="false" version="${dubbo.service.version}" ></dubbo:reference>
+
+	<!-- 第三方优惠券 -->
+	<dubbo:reference id="thirdCouponWriteFacade" interface="com.lizikj.cater.facade.IThirdCouponWriteFacade" check="false" version="${dubbo.service.version}" />
+</beans>

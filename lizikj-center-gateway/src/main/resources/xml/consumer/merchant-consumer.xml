@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--商户 -->
+    <dubbo:reference id="authShopAuthReadFacade" interface="com.lizikj.merchant.facade.IAuthShopAuthReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="authShopAuthWriteFacade" interface="com.lizikj.merchant.facade.IAuthShopAuthWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopEquipmentReadFacade" interface="com.lizikj.merchant.facade.IShopEquipmentReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopEquipmentWriteFacade" interface="com.lizikj.merchant.facade.IShopEquipmentWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopMerchantReadFacade" interface="com.lizikj.merchant.facade.IShopMerchantReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopReadFacade" interface="com.lizikj.merchant.facade.IShopReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopWriteFacade" interface="com.lizikj.merchant.facade.IShopWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="userReadFacade" interface="com.lizikj.merchant.facade.IUserReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="userWriteFacade" interface="com.lizikj.merchant.facade.IUserWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="agentVasReadFacade" interface="com.lizikj.merchant.facade.IAgentVasReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantPaymentConfigReadFacade" interface="com.lizikj.merchant.facade.IMerchantPaymentConfigReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopExpandReadFacade" interface="com.lizikj.merchant.facade.IShopExpandReadFacade" check="false" version="${dubbo.service.version}" />
+
+    <dubbo:reference id="shopDeskQrcodeTemplateWriteFacade" interface="com.lizikj.merchant.facade.IShopDeskQrcodeTemplateWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopDeskQrcodeTemplateReadFacade" interface="com.lizikj.merchant.facade.IShopDeskQrcodeTemplateReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="tradeAreaReadFacade" interface="com.lizikj.merchant.facade.ITradeAreaReadFacade" check="false" version="${dubbo.service.version}" />
+
+
+</beans>

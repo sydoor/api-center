@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbook>
+    <worksheet name="Sheet1">
+        <section startRow="0" endRow="0"/>
+        <loop startRow="2" endRow="1074" items="vdshopInfoList" var="vdshopInfo"
+              varType="com.lizikj.shop.api.dto.VDShopInfoDTO">
+
+            <section startRow="1" endRow="1">
+                <mapping row="1" col="0">vdshopInfo.merchantId</mapping>
+                <mapping row="1" col="1">vdshopInfo.shopId</mapping>
+                <mapping row="1" col="2">vdshopInfo.agentId</mapping>
+                <mapping row="1" col="3">vdshopInfo.shopName</mapping>
+                <mapping row="1" col="4">vdshopInfo.provinceName</mapping>
+                <mapping row="1" col="5">vdshopInfo.sn</mapping>
+                <mapping row="1" col="6">vdshopInfo.createTime</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0"></cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

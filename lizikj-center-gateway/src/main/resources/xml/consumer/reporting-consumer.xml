@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!--报表 -->
+    <dubbo:reference id="merchandiseReportFacade" interface="com.lizikj.reporting.facade.IMerchandiseReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="merchantMemberReportFacade" interface="com.lizikj.reporting.facade.IMerchantMemberReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="memberReportFacade" interface="com.lizikj.reporting.facade.IMemberReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="posPaymentReportFacade" interface="com.lizikj.reporting.facade.IPosPaymentReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="orderReportFacade" interface="com.lizikj.reporting.facade.IOrderReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="paymentReportFacade" interface="com.lizikj.reporting.facade.IPaymentReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="platformReportFacade" interface="com.lizikj.reporting.facade.IPlatformReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="reportingPosFacade" interface="com.lizikj.reporting.facade.IPosPaymentReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="valueServiceReportFacade" interface="com.lizikj.reporting.facade.IValueServiceReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="statisticFacade" interface="com.lizikj.reporting.facade.IStatisticFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="businessOperationPlanFacade" interface="com.lizikj.reporting.facade.IBusinessOperationPlanFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="caterOrderReportFacade" interface="com.lizikj.reporting.facade.ICaterOrderReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="cashierReportReadFacade" interface="com.lizikj.reporting.facade.ICashierReportReadFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="shopGoodsReportFacade" interface="com.lizikj.reporting.facade.IShopGoodsReportFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="memberCountConsumeReportWriteFacade" interface="com.lizikj.reporting.facade.IMemberCountConsumeReportWriteFacade" check="false" version="${dubbo.service.version}" />
+    <dubbo:reference id="memberCountConsumeReportReadFacade" interface="com.lizikj.reporting.facade.IMemberCountConsumeReportReadFacade" check="false" version="${dubbo.service.version}" />
+</beans>
